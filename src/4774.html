@@ -1,0 +1,118 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>My first tic-tac-toe</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+      html, body, .content {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        font-family: 'Roboto';
+      }
+
+      .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .field {
+        padding: 16px;
+        border-width: 1px;
+        border-color: #e6e6e6;
+        border-radius: 8px;
+        display: grid;
+        grid-template-columns: repeat(3, 150px);
+        grid-template-rows: repeat(3, 150px);
+        border-style: solid;
+        gap: 8px;
+        box-shadow: 6px 6px 24px #ccc ccc;
+      }
+
+      .cell {
+        border-width: 1px;
+        border-radius: 6px;
+        background-color: #e6e6e6;
+        border-color: #e6e6e6;
+        padding: 16px;
+        border-style: solid;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 72px;
+        color: black;
+        text-decoration: none;
+        box-shadow: 1px 1px 3px #e6e6e6;
+        pointer-events: none;
+        cursor: default;
+      }
+
+      .enable {
+        transition: transform 0.2;
+        pointer-events: all;
+        cursor: pointer;
+      }
+
+      .enable:hover {
+        transform: scale(1.03);
+      }
+
+      .restart {
+        margin: 24px;
+        padding: 12px 24px;
+        border-radius: 8px;
+        border-width: 0px;
+        font-size: 18px;
+        background-color: #e6e6e6;
+        cursor: pointer;
+      }
+
+      .restart:hover {
+        background-color: #cccccc;
+      }
+
+      .restart:active {
+        transition: transform 0s;
+        transform: scale(1.05);
+      }
+
+      .red {
+        color: red;
+      }
+
+      .blue {
+        color: blue;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="content">
+      <h1><span class="blue">O</span> won!</h1>
+      <div class="field">
+        <a class="cell"><span class="blue">O</span></a>
+        <a class="cell"><span class="blue">O</span></a>
+        <a class="cell"><span class="blue">O</span></a>
+        <a class="cell"><span class="blue">O</span></a>
+        <a class="cell"><span class="red">X</span></a>
+        <a class="cell"><span class="red">X</span></a>
+        <a class="cell"><span class="red">X</span></a>
+        <a class="cell"> </a>
+        <a class="cell"><span class="red">X</span></a>
+      </div>
+      <a href="index.html"><button class="restart">Restart</button></a>
+      <div class="about">
+        Code by
+        <a href="https://github.com/leadpogrommer">@leadpogrommer</a>
+        , design by
+        <a href="https://github.com/nerlihmax">@nerlihmax</a>.
+        <a href="https://github.com/leadpogrommer/my_first_tictactoe">Sources</a>
+      </div>
+    </div>
+  </body>
+</html>
